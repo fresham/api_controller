@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "api_controller-0.1.0.gem",
     "api_controller.gemspec",
     "lib/generators/api_controller/USAGE",
     "lib/generators/api_controller/api_controller_generator.rb",
