@@ -42,15 +42,18 @@ class ApiControllerGenerator < Rails::Generators::Base
 
   def create_routes
     final = []
-    lines = File.new("#{RAILS_ROOT}/config/routes.rb").readlines
-    lines.each do |line|
-      final << line
-      if line =~ /[\d]+?::Application.routes.draw do/
-        final << <<-ROUTES
-          namespace :api do
-            namespace v#{version} do
-              resources :#{model}, :controller => '#{model}_api', :only => [:index, :show, :create, :update, :destroy]
-        ROUTES
+    File.open("#{RAILS_ROOT}/config/routes.rb", "r+") do |file|
+      file.each do |line|
+        final << line
+        if line =~ /[\d]+?::Application.routes.draw/
+          final << <<-ROUTES
+            namespace :api do
+              namespace v#{version} do
+                resources :#{model}, :controller => '#{model}_api', :only => [:index, :show, :create, :update, :destroy]
+          ROUTES
+        end
+      end
+      file.puts final
     end
   end
 end
