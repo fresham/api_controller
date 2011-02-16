@@ -15,6 +15,10 @@ class ApiControllerGenerator < Rails::Generators::Base
     template 'api_controller_test.rb', "test/functional/#{structure}#{model}_api_test.rb"
   end
 
+  def adjust_routes
+    create_routes
+  end
+
   private
 
   def version
@@ -34,5 +38,19 @@ class ApiControllerGenerator < Rails::Generators::Base
 
   def make_dir(dir)
     Dir.mkdir dir unless File.directory?(dir)
+  end
+
+  def create_routes
+    final = []
+    lines = File.new("#{RAILS_ROOT}/config/routes.rb").readlines
+    lines.each do |line|
+      final << line
+      if line =~ /[\d]+?::Application.routes.draw do/
+        final << <<-ROUTES
+          namespace :api do
+            namespace v#{version} do
+              resources :#{model}, :controller => '#{model}_api', :only => [:index, :show, :create, :update, :destroy]
+        ROUTES
+    end
   end
 end
