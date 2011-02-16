@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "api_controller"
   gem.homepage = "http://github.com/crfrazer/api_controller"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Genarator for controllers dedicated to custom APIs.}
+  gem.description = %Q{Genarator for controllers dedicated to custom APIs.}
   gem.email = "cody.frazer@cph.org"
   gem.authors = ["Cody Frazer"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
