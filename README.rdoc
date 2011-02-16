@@ -1,6 +1,6 @@
 = api_controller
 
-Description goes here.
+Genarator for controllers dedicated to custom APIs.
 
 == Contributing to api_controller
  
