@@ -54,6 +54,7 @@ class ApiControllerGenerator < Rails::Generators::Base
           ROUTES
         end
       end
+      file.pos = 0
       file.puts final
     end
   end
