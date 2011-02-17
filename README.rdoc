@@ -1,16 +1,26 @@
 = api_controller
 
-Genarator for controllers dedicated to custom APIs.
+Generator for controllers dedicated to custom APIs.
 
 == Usage
 
 <tt>rails generate api_controller MODEL(plural, lowercase) [VERSION]</tt>
 
-<tt>rails generate api_controller people 2</tt>
+<tt>rails generate api_controller people 2</tt>  
 generates:
     app/controllers/api/v2/person_api_controller.rb
     test/functional/api/v2/person_api_controller.rb
 
+== To do
+
+* modularize test framework usage
+* add proper requirements to all files so that everything works outside of a
+rails project (and in different versions of rails)
+* make opinionated, robust api and test generation
+* test!
+* change the parameters for the command so that either the plural (people) or
+class name (Person) can be used.
+* use variable caching in generation methods (version)
 
 == Contributing to api_controller
  
@@ -26,4 +36,3 @@ generates:
 
 Copyright (c) 2011 Cody Frazer. See LICENSE.txt for
 further details.
-
