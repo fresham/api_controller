@@ -2,6 +2,16 @@
 
 Genarator for controllers dedicated to custom APIs.
 
+== Usage
+
+`rails generate api_controller MODEL(plural, lowercase) [VERSION]
+
+`rails generate api_controller people 2`
+generates:
+    app/controllers/api/v2/person_api_controller.rb
+    test/functional/api/v2/person_api_controller.rb
+
+
 == Contributing to api_controller
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
