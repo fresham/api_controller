@@ -46,7 +46,7 @@ class ApiControllerGenerator < Rails::Generators::Base
     File.open("#{RAILS_ROOT}/config/routes.rb", "r+") do |file|
       file.each do |line|
         final << line
-        if line =~ /[\d]+?::Application.routes.draw/
+        if line =~ /\w+::Application.routes.draw/
           final << <<-ROUTES
             namespace :api do
               namespace v#{version} do
