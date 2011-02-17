@@ -4,9 +4,9 @@ Genarator for controllers dedicated to custom APIs.
 
 == Usage
 
-`rails generate api_controller MODEL(plural, lowercase) [VERSION]
+<tt>rails generate api_controller MODEL(plural, lowercase) [VERSION]</tt>
 
-`rails generate api_controller people 2`
+<tt>rails generate api_controller people 2</tt>
 generates:
     app/controllers/api/v2/person_api_controller.rb
     test/functional/api/v2/person_api_controller.rb
