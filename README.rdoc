@@ -14,12 +14,10 @@ generates:
 == To do
 
 * modularize test framework usage
-* add proper requirements to all files so that everything works outside of a
-rails project (and in different versions of rails)
+* add proper requirements to all files so that everything works outside of a rails project (and in different versions of rails)
 * make opinionated, robust api and test generation
 * test!
-* change the parameters for the command so that either the plural (people) or
-class name (Person) can be used.
+* change the parameters for the command so that either the plural (people) or class name (Person) can be used.
 * use variable caching in generation methods (version)
 
 == Contributing to api_controller
