@@ -9,10 +9,11 @@ rescue Bundler::BundlerError => e
 end
 require 'test/unit'
 require 'shoulda'
+require 'rails'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
-require 'api_controller'
+require 'generators/api_controller/api_controller_generator.rb'
 
 class Test::Unit::TestCase
 end
