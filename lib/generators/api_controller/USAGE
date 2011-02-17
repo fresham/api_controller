@@ -2,7 +2,7 @@ Description:
     Generates an API controller with tests for a given controller.
 
 Example:
-    rails generate api_controller Person 2
+    rails generate api_controller people 2
 
     This will create:
         app/controllers/api/v2/person_api_controller.rb
