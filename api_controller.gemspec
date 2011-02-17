@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{api_controller}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Cody Frazer"]
-  s.date = %q{2011-02-16}
+  s.date = %q{2011-02-17}
   s.description = %q{Genarator for controllers dedicated to custom APIs.}
   s.email = %q{cody.frazer@cph.org}
   s.extra_rdoc_files = [
