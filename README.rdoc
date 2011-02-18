@@ -19,6 +19,10 @@ generates:
 * test!
 * change the parameters for the command so that either the plural (people) or class name (Person) can be used.
 * use variable caching in generation methods (version)
+* shorten generator name
+* only make new routes if necessary
+* default generator should be 'api' (generates test and controller); possibly add other generators (test, controller, barebones, etc.)
+* properly insert routes
 
 == Contributing to api_controller
  
