@@ -48,9 +48,13 @@ class ApiControllerGenerator < Rails::Generators::Base
         final << line
         if line =~ /\w+::Application.routes.draw/
           final << <<-ROUTES
-            namespace :api do
-              namespace v#{version} do
-                resources :#{model}, :controller => '#{model}_api', :only => [:index, :show, :create, :update, :destroy]
+
+  namespace :api do
+    namespace v#{version} do
+      resources :#{model}, :controller => '#{model}_api', :only => [:index, :show, :create, :update, :destroy]
+    end
+  end
+
           ROUTES
         end
       end
