@@ -51,7 +51,8 @@ class ApiControllerGenerator < Rails::Generators::Base
 
   namespace :api do
     namespace v#{version} do
-      resources :#{model}, :controller => '#{model}_api', :only => [:index, :show, :create, :update, :destroy]
+      resources :#{model}, :controller => '#{model}_api',
+        :only => [:index, :show, :create, :update, :destroy]
     end
   end
 
