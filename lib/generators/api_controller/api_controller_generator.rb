@@ -50,7 +50,7 @@ class ApiControllerGenerator < Rails::Generators::Base
           final << <<-ROUTES
 
   namespace :api do
-    namespace v#{version} do
+    namespace :v#{version} do
       resources :#{model}, :controller => '#{model}_api',
         :only => [:index, :show, :create, :update, :destroy]
     end
